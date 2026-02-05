@@ -1,0 +1,41 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, Arial, sans-serif; margin: 0; background: #0b0f17; color: #e7ecf3; }
+
+.header { padding: 18px 20px; border-bottom: 1px solid #1e2635; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.header h1 { margin: 0; font-size: 18px; letter-spacing: 0.2px; }
+
+.container { max-width: 980px; margin: 0 auto; padding: 18px; }
+
+.tabs { display: flex; gap: 8px; }
+.tab { background: transparent; border: 1px solid #2a3550; color: #e7ecf3; padding: 8px 12px; border-radius: 10px; cursor: pointer; }
+.tab.active { background: #162036; border-color: #3a4b73; }
+
+.view.hidden { display: none; }
+
+.card { background: #0f1626; border: 1px solid #1e2635; border-radius: 14px; padding: 14px; margin-bottom: 14px; }
+.row { display: grid; grid-template-columns: 120px 1fr auto; gap: 10px; align-items: center; margin: 10px 0; }
+.label { color: #9fb0cc; font-size: 13px; }
+input, select { width: 100%; padding: 10px 12px; border-radius: 12px; border: 1px solid #2a3550; background: #0b1020; color: #e7ecf3; }
+button { padding: 10px 12px; border-radius: 12px; border: 1px solid #2a3550; background: #162036; color: #e7ecf3; cursor: pointer; }
+button:hover { border-color: #3a4b73; }
+
+.status { margin: 6px 0 0; color: #9fb0cc; min-height: 18px; }
+.muted { color: #9fb0cc; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+.grid.small { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+
+.item { background: #0f1626; border: 1px solid #1e2635; border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+.thumb { width: 100%; aspect-ratio: 2 / 3; background: #0b1020; display: grid; place-items: center; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.content { padding: 10px; display: flex; flex-direction: column; gap: 6px; }
+.title { font-size: 14px; font-weight: 650; line-height: 1.2; }
+.sub { font-size: 12px; color: #9fb0cc; min-height: 16px; }
+.actions { display: flex; gap: 8px; margin-top: 6px; }
+.actions button { flex: 1; }
+
+.danger { background: #2a1020; border-color: #5a2a45; }
+.danger:hover { border-color: #a24a76; }
+
+.stacks { display: grid; gap: 14px; }
+.stack h3 { margin: 0 0 8px; }

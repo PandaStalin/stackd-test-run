@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Media Stacks</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Media Stacks</h1>
+    <nav class="tabs">
+      <button class="tab active" data-view="search">Search</button>
+      <button class="tab" data-view="profile">Profile</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- SEARCH VIEW -->
+    <section id="view-search" class="view">
+      <div class="card">
+        <div class="row">
+          <label class="label">Category</label>
+          <select id="category">
+            <option value="movies">Movies (TMDB)</option>
+            <option value="books">Books (Google Books)</option>
+            <option value="albums">Albums (Discogs)</option>
+          </select>
+        </div>
+
+        <div class="row">
+          <label class="label">Search</label>
+          <input id="query" placeholder="Try: Interstellar / Dune / Daft Punk" />
+          <button id="btnSearch">Search</button>
+        </div>
+
+        <p id="status" class="status"></p>
+      </div>
+
+      <section>
+        <h2>Results</h2>
+        <div id="results" class="grid"></div>
+      </section>
+    </section>
+
+    <!-- PROFILE VIEW -->
+    <section id="view-profile" class="view hidden">
+      <div class="card">
+        <h2>Your Profile</h2>
+        <p class="muted">Click “Add to Favorites” from search results. Max 5 per category.</p>
+      </div>
+
+      <section class="stacks">
+        <div class="stack">
+          <h3>Movies (5)</h3>
+          <div id="fav-movie" class="grid small"></div>
+        </div>
+
+        <div class="stack">
+          <h3>Books (5)</h3>
+          <div id="fav-book" class="grid small"></div>
+        </div>
+
+        <div class="stack">
+          <h3>Albums (5)</h3>
+          <div id="fav-album" class="grid small"></div>
+        </div>
+      </section>
+
+      <button id="btnClear" class="danger">Clear all favorites</button>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
