@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5174/api";
+const API_BASE = "https://stackd-test-run.onrender.com/api";
 
 const els = {
   tabs: document.querySelectorAll(".tab"),
